@@ -35,13 +35,13 @@ listint_t *insert_node(listint_t **head, int number)
 			*head = new;
 			return (new);
 		}
-		if (prev->n <= number && next->n >= number)
+		else if (prev->n <= number && next->n >= number)
 		{
 			prev->next = new;
 			new->next = next;
 			return (new);
 		}
-		if (!next && prev->n <= number)
+		else if (!next && prev->n <= number)
 		{
 			prev->next = new;
 			new->next = NULL;
