@@ -16,6 +16,5 @@ def minOperations(n):
         while(n % time == 0):
             nOperations += time
             n = n / time
-        time += 1
     return(nOperations)
 
