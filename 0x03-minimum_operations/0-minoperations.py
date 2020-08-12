@@ -15,6 +15,7 @@ def minOperations(n):
     for time in range(2, n+1):
         while(n % time == 0):
             nOperations += time
-            n = n/time
+            n = n / time
+        time += 1
     return(nOperations)
 
