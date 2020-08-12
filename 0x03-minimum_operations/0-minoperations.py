@@ -2,6 +2,8 @@
 """
 Minimum Operations
 """
+
+
 def minOperations(n):
     """
     Returns an integer
@@ -13,3 +15,4 @@ def minOperations(n):
             nOperations += time
             n = n/time
     return(nOperations)
+
