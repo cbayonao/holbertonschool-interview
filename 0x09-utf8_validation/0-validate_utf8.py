@@ -16,10 +16,11 @@ def validUTF8(data):
     secondVer = 1 << 6
 
     for i in data:
+        mask_n_byte = 1 << 7
         if countBytes == 0:
-            while oneVer & i:
+            while mask_n_byte & i:
                 countBytes += 1
-                oneVer = oneVer >> 1
+                mask_n_byte = mask_n_byte >> 1
 
             if countBytes == 0:
                 continue
@@ -29,4 +30,6 @@ def validUTF8(data):
             if not (i & oneVer and not (i & secondVer)):
                 return False
         countBytes -= 1
-    return countBytes == 0
+    if countBytes == 0:
+        return True
+    return False
