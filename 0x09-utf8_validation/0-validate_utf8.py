@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" UTF-8 Validation """
+
+
 def validUTF8(data):
     """
     Return: True if data is a valid UTF-8 encoding, else return False
@@ -11,6 +14,7 @@ def validUTF8(data):
     countBytes = 0
     oneVer = 1 << 7
     secondVer = 1 << 6
+
     for i in data:
         if countBytes == 0:
             while oneVer & i:
